@@ -3,19 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>To Do List</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<script type="text/javascript" src="assets/js/lib/jquery-3.2.1.slim.min.js"></script>
 </head>
 <body>
 	<div id="container">
-		<h1>To Do List</h1>
-		<input type="text" name="task">
+		<h1>To Do List<i class="fa fa-plus" aria-hidden="true"></i>
+</h1>
+		<input type="text" name="task" placeholder="Add New Task">
 		<ul>
-			<li><span class="X">X </span>Wash the car</li>
-			<li><span class="X">X </span>Get your hair done</li>
-			<li><span class="X">X </span>Pedicure</li>
+			<li><span><i class="fa fa-trash" aria-hidden="true"></i></span>Wash the car</li>
+			<li><span><i class="fa fa-trash" aria-hidden="true"></i></span>Get your hair done</li>
+			<li><span><i class="fa fa-trash fa-sm" aria-hidden="true"></i></span>Pedicure</li>
 		</ul>
-
 	</div>
 	
 <script type="text/javascript" src="assets/js/todo.js"></script>	
