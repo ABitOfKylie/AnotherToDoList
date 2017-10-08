@@ -38,6 +38,7 @@ li{
 	line-height: 40px;
 	color: #666;
 	text-transform: capitalize;
+	padding-left:20px;
 }
 
 li:nth-child(2n){
@@ -49,19 +50,27 @@ li:nth-child(2n){
 li:hover span{
 	width: 40px;
 	opacity: 1.0;
+	margin-right:0;
+
 }
 
 span{
 	background-color: #E74C3C;
 	height: 40px;
 	width: 0px;
-	margin-right: 20px;
+	margin-right: 25px;
 	text-align: center;
 	color:white;
 	display: inline-block;
 	transition: 0.2s linear;
 	opacity: 0;
+	float:right;
 }
+
+/*.righthand{
+	background-color: #E74C3C;
+	float:right;
+}*/
 
 input{
 	font-size: 18px;
