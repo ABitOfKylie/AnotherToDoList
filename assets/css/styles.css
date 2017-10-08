@@ -38,7 +38,6 @@ li{
 	line-height: 40px;
 	color: #666;
 	text-transform: capitalize;
-
 }
 
 li:nth-child(2n){
@@ -87,5 +86,5 @@ input:focus{
 
 .fa-plus{
 	float:right;
-	padding: 10px;
-}
+/*	padding: 10px;
+*/}
