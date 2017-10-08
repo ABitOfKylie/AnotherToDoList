@@ -41,12 +41,6 @@ $(".fa-plus").click(function(){
 // ****** re: Function delete, fade, remove task ******
 //     $(this).parent().fadeOut().remove; remove won't wait for fadeOut to finish	
 
-
-// 			event.stopPropagation();
-// 			stop the event from bubbling up and not affect the li click event
-
-
-// ----------Ky Code working but removes only - no fade out. 
 // Click on span to delete task  - remove the entire li
 // $("ul").on("click", "span", function(event){
 // 			console.log("span has been clicked");
