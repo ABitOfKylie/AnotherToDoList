@@ -97,3 +97,7 @@ input:focus{
 	float:right;
 /*	padding: 10px;
 */}
+.fa-check{
+	padding-left:2px;
+	color:#2ED40DFF;
+}

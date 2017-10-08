@@ -1,6 +1,9 @@
 // Check Off Specific tasks -see note below
 $("ul").on("click", "li", function(){
 	$(this).toggleClass("completed");
+	$(this).prepend("<i class='fa fa-check'></i>");
+	// adds a check everytime you click
+
 });
 
 // // Click on span to delete task  - remove the entire li
