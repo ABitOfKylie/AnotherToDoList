@@ -1,6 +1,14 @@
 # AnotherToDoList
 To Do list using Javascript/jQuery and basic animations
 
+Upon opening, only the list of tasks is shown. The plus icon at the top when clicked 'reveals' the input where a new task can be added.
+
+Clicking a task <li> adds a checkmark and strikes out the task to indicate that the task is completed.
+Clicking the <li> again toggles it back to original state.
+
+Clicking on the animated trashcan deletes the task.
+
+
 Some notes on the todo.js code: 
 
 re: Function check off tasks

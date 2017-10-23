@@ -1,10 +1,35 @@
 // Check Off Specific tasks -see note below
+// $("ul").on("click", "li", function(){
+// 	$(this).toggleClass("completed");
+// 		$(this.completed).prepend("<i class='fa fa-check'></i>");
+// 		});
+
+
 $("ul").on("click", "li", function(){
 	$(this).toggleClass("completed");
-	$(this).prepend("<i class='fa fa-check'></i>");
-	// adds a check everytime you click
+		if($(this).hasClass("completed")) {
+			$(this).prepend("<i class='green fa fa-check'></i>");
+		} else{
+			console.log("class was not completed");
+			// $(this).remove( ":contains(<i class='fa fa-check'></i>)");
+			$(".fa-check").remove();
+			event.stopPropagation();
 
+		}
 });
+
+   // $( "p" ).remove( ":contains('Hello')" );
+
+// adds a check everytime you click		
+
+
+
+	// $( ".fa-check" ).toggle( display ); doesn't
+
+	// $('#about.opened').animate(...); won't do it if it doesn't have the class
+
+
+
 
 // // Click on span to delete task  - remove the entire li
 $("ul").on("click", "span", function(event){
@@ -26,7 +51,7 @@ $("input[type='text']").keypress(function(event){
 });
 
 
-$(".fa-plus").click(function(){
+$(".fa-plus-square-o").click(function(){
 	$("input[type='text']").fadeToggle();
 });
 
