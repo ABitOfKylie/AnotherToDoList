@@ -1,58 +1,37 @@
 // Check Off Specific tasks -see note below
-// $("ul").on("click", "li", function(){
-// 	$(this).toggleClass("completed");
-// 		$(this.completed).prepend("<i class='fa fa-check'></i>");
-// 		});
-
-
-$("ul").on("click", "li", function(){
-	$(this).toggleClass("completed");
-		if($(this).hasClass("completed")) {
-			$(this).prepend("<i class='green fa fa-check'></i>");
-		} else{
-			console.log("class was not completed");
-			// $(this).remove( ":contains(<i class='fa fa-check'></i>)");
-			$(".fa-check").remove();
-			event.stopPropagation();
-
-		}
+$("ul").on("click", "li", function() {
+    $(this).toggleClass("completed");
+    if ($(this).hasClass("completed")) {
+        $(this).prepend("<i class='green fa fa-check'></i>");
+    } else {
+        console.log("class was not completed");
+        // $(this).remove( ":contains(<i class='fa fa-check'></i>)");
+        $(this).find('.fa-check').remove();
+    }
 });
-
-   // $( "p" ).remove( ":contains('Hello')" );
-
-// adds a check everytime you click		
-
-
-
-	// $( ".fa-check" ).toggle( display ); doesn't
-
-	// $('#about.opened').animate(...); won't do it if it doesn't have the class
-
-
-
 
 // // Click on span to delete task  - remove the entire li
-$("ul").on("click", "span", function(event){
-	$(this).parent().fadeOut(1000,function(){
-		$(this).remove();
-	});
-	event.stopPropagation();
+$("ul").on("click", "span", function(event) {
+    $(this).parent().fadeOut(1000, function() {
+        $(this).remove();
+    });
+    event.stopPropagation();
+});
+
+//  Add new input task to list
+$("input[type='text']").keypress(function(event) {
+    if (event.which === 13) {
+        //below grabs new toDo text from input
+        var newTask = $(this).val();
+        $(this).val("");
+        //create a new li and add to ul
+        $("ul").append("<li><span><i class='fa fa-trash'></i></span>" + newTask + "</li>");
+    }
 });
 
 
-$("input[type='text']").keypress(function(event){
-	if(event.which === 13){
-		//below grabs new toDo text from input
-		var newTask = $(this).val();
-		$(this).val("");
-		//create a new li and add to ul
-		$("ul").append("<li><span><i class='fa fa-trash'></i></span>" + newTask + "</li>");
-	}
-});
-
-
-$(".fa-plus-square-o").click(function(){
-	$("input[type='text']").fadeToggle();
+$(".fa-plus-square-o").click(function() {
+    $("input[type='text']").fadeToggle();
 });
 
 // ********************Notes******************
